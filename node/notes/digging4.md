@@ -9,3 +9,6 @@ There are conventions for how this works. The dashes that get put in front of th
 If there is anything in the input that minimist can't figure out, it will place at the beginning of the items that are returned.
 
 There are a bunch of different ways parameters can get parsed;
+
+Minimist is a great resource, and it is used by TONS of other programs.
+Another option is YARGS.
