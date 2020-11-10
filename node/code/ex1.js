@@ -2,6 +2,7 @@
 "use strict";
 
 var path = require("path");
+var fs = require("fs");
 
 var args = require("minimist")(process.argv.slice(2), {
     boolean: ["help"],
@@ -14,12 +15,17 @@ if (args.help) {
 
 }
 else if (args.file ){
-    let filepath = path.resolve(args.file);
-    console.log(__dirname);
-    console.log(filepath);
+    processFile(path.resolve(args.file));
 }
 else {
     error("incorrect Usage", true);
+}
+
+function processFile(filepath){
+    var contents = fs.readFileSync(filepath);
+
+    process.stdout.write(contents);
+    // console.log(contents);
 }
 
 
