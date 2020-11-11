@@ -4,5 +4,6 @@
 
 - components
 - Express. What do you know about Express?
-- Many "ads" as third parties. What would he do?
-- Have you worked with the REST API much? Teach me.
+- Many "ads" as third parties. What would he do to maintain continuity?
+- Have you worked with the REST API much?
+- How to debug while upgrading?

@@ -14,6 +14,7 @@ Use it to print WHERE a file should be, if it is passed in as an argument:
 "path" is built into node.
 
 Another property is "__dirname"
+It tells current directory of current file
 
 By default, if you read a file, they are assuming things in BINARY with console.log;
 So, change to `    process.stdout.write(contents);`

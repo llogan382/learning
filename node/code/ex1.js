@@ -22,9 +22,15 @@ else {
 }
 
 function processFile(filepath){
-    var contents = fs.readFileSync(filepath);
+    fs.readFile(filepath,function onContents(err,contents){
 
-    process.stdout.write(contents);
+    if (err) {
+        error(err.toString());
+
+    } else {
+        process.stdout.write(contents);
+    }
+});
     // console.log(contents);
 }
 
