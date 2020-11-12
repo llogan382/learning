@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let url = '';
+
+async function showAvatar() {
+
+// read our JSON
+let response = await fetch('https://www.motortrend.com/wp-json/wp/v2/posts');
+let user = await response;
+
+await new Promise((resolve, reject) => setTimeout(resolve, 3000));
+
+console.log(user);
+
+return user;
+}
+
+showAvatar();
+
+
+    </script>
+</body>
+</html>

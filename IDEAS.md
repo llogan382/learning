@@ -16,7 +16,9 @@ What do I need to learn?
 6. Varnish/caching/transients
 
 
-How can I learn?
-1. Look at the codebase. Check out the WordPress codebase. And the Loadable Components codebase.
-2. Frontend masters. This is good for NODE.
-3. Github. Look at repos using loadable components.
+If the version of WordPress is updated, the JS libraries will need to be updated as well.
+
+How to prepare?
+- get to know current version of WordPress
+- Read CORE docs.
+- Get to know ALL REST api functions;
