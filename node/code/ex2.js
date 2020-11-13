@@ -4,8 +4,9 @@
 var util = require("util");
 var path = require("path");
 var fs = require("fs");
+const { Stream } = require("stream");
 
-var getStdin = require("get-stdin");
+// var getStdin = require("get-stdin");
 
 var args = require("minimist")(process.argv.slice(2), {
     boolean: ["help", "in"],
@@ -22,28 +23,20 @@ if (args.help) {
 else if (args.in ||
     args._.includes("-")
 ) {
-    getStdin().then(processFile).catch(error);
+    processFile(process.stdin);
 }
 else if (args.file) {
-    fs.readFile(path.join(BASE_PATH, args.file), function onContents(err, contents) {
-
-        if (err) {
-            error(err.toString());
-
-        } else {
-            processFile(contents.toString());
-
-        }
-    });
-
+    let stream = fs.createReadStream(BASE_PATH, args.file);
+    processFile(stream);
 }
 else {
     error("incorrect Usage", true);
 };
 
-function processFile(contents) {
-    contents = contents.toUpperCase();
-    process.stdout.write(contents);
+function processFile(inStream) {
+    var target = process.stdout;
+
+    outStream.pipe(targetStream);
 };
 // console.log(contents);
 
@@ -56,7 +49,7 @@ function error(msg, includeHelp = false) {
         console.log("");
         printHelp();
     }
-    ex
+
 }
 
 
