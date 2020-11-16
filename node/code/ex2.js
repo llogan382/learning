@@ -4,7 +4,7 @@
 var util = require("util");
 var path = require("path");
 var fs = require("fs");
-const { Stream } = require("stream");
+// const { Stream } = require("stream");
 
 // var getStdin = require("get-stdin");
 
@@ -26,17 +26,23 @@ else if (args.in ||
     processFile(process.stdin);
 }
 else if (args.file) {
-    let stream = fs.createReadStream(BASE_PATH, args.file);
+    let stream = fs.createReadStream(path.join(BASE_PATH,args.file));
     processFile(stream);
+
+
 }
 else {
     error("incorrect Usage", true);
 };
 
 function processFile(inStream) {
-    var target = process.stdout;
+    var outStream = inStream;
+
+    var targetStream = process.stdout;
 
     outStream.pipe(targetStream);
+
+
 };
 // console.log(contents);
 

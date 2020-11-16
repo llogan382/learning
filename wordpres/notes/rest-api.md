@@ -1,5 +1,9 @@
 # Learn more about the WordPress Rest API with REACT
 
+
+ **what is it?**
+ Any programming language which can make HTTP requests and interpret JSON can use the REST API to interact with WordPress, from PHP, Node.js, Go, and Java, to Swift, Kotlin, and beyond.
+
 ## Concepts to learn:
 
 - WP_REST_Response class
@@ -36,4 +40,3 @@
 - Class Inheritance & WP_REST_Controller #Class Inheritance &WP_REST_Controller, found [here](https://developer.wordpress.org/rest-api/extending-the-rest-api/controller-classes/)
 - `WP_REST_Server`
 - the [changelog](https://developer.wordpress.org/rest-api/changelog/)
--
