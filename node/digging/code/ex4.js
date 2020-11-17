@@ -56,19 +56,25 @@ async function main() {
 	var other = args.other;
 	var something = Math.trunc(Math.random() * 1E9);
 
-	// ***********
+    // ***********
 
-	var otherID = await insertOrLookupOther(other);
+    var otherID = await insertOrLookupOther(other);
+
 
 	if (otherID) {
-		let result = await insertSomething(otherID,something){
+		let result = await insertSomething(otherID,something);
 			if(result){
+                var records = await getAllRecords();
+
+
+                if (records && records.length > 0){
+                    console.table(records);
+                }
 
 			}
 		}
-		return;
 
-	}
+
 	error("Oops!");
 }
 
@@ -114,7 +120,7 @@ async function insertSomething(otherID,something){
 				(?,?)
 			`,
 		otherID,
-		data
+		something
 	);
 		if (result && result.changes > 0){
 			return true;
@@ -122,6 +128,24 @@ async function insertSomething(otherID,something){
 		return false;
 }
 
+async function getAllRecords(){
+    var result = await SQL3.all(
+        `
+        SELECT
+            Other.data AS 'other',
+            Something.data AS 'something'
+        FROM
+            Something JOIN Other
+            ON (Something.otherID = Other.id)
+        ORDER BY
+            Other.id DESC, Something.data ASC
+        `
+    );
+
+    if (result && result.length > 0){
+        return result;
+    }
+}
 
 function error(err) {
 	if (err) {
