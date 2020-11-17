@@ -1,11 +1,11 @@
 "use strict";
 
-var fetch = require("node-fetch");
+// var fetch = require("node-fetch");
 
 
 // ************************************
 
-const HTTP_PORT = 8039;
+const HTTP_PORT = 8055;
 
 
 main().catch(() => 1);
@@ -14,17 +14,19 @@ main().catch(() => 1);
 // ************************************
 
 async function main() {
+	// TODO
 	try {
-		var res = await fetch(`http://localhost:${HTTP_PORT}/get-records`);
-		if (res && res.ok) {
+		let res = await fetch('http://localhost:8055/get-records');
+		if(res && res.ok){
 			let records = await res.json();
-			if (records && records.length > 0) {
+			if(records && records.length > 0){
 				process.exitCode = 0;
 				return;
 			}
 		}
 	}
-	catch (err) {}
-
+	catch (err){
+		console.log(err);
+	}
 	process.exitCode = 1;
 }
