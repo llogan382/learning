@@ -1,16 +1,15 @@
 var courses = [
-['Intro to Node', 4, 50],
 ['The hard parts servers and node', 5, 16],
-['Digging into Node', 4, 0],
 ['API design in Node v3', 3, 34],
 ['Server side GraphQL in Node', 3, 24],
-['Full Stack for Frontend Engineers', 6, 19]
-];
+['advanced GraphQL v2', 3, 25];
 
 
 var electives = [
     ['Advanced graphql', 3, 25],
     ['Rethinking asynch JS', 6, 22]
+    ['Intro to MongoDB', 3, 23]
+
 ];
 
 // Get total number of minutes

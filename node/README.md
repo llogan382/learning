@@ -1,4 +1,6 @@
 # IDEAS/Things to Learn
 
-- Async code
--
+For NODE:
+
+ - Serverless
+ -
