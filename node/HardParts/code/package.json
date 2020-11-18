@@ -1,0 +1,18 @@
+{
+  "name": "frontend-masters",
+  "version": "1.0.0",
+  "description": "## Summary The purpose of this challenge is to understand server fundamentals in vanilla Node.js under the hood - notably the request and response object. We will be learning how to deal with events, streams and constructing the request body. Later on, the popular framework Express will abstract these concepts, but we want to learn their fundamental workings in this unit.",
+  "main": "server.js",
+  "dependencies": {
+    "through2": "^3.0.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "streams": "cd streams && node streams.js "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
