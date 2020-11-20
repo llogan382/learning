@@ -7,3 +7,7 @@
 - Many "ads" as third parties. What would he do to maintain continuity?
 - Have you worked with the REST API much?
 - How to debug while upgrading?
+
+
+1. How do SEO and developer needs (like small file size) tie into the design system?
+2.

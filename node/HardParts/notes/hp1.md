@@ -47,3 +47,22 @@ Bundle it up in a function, and NODE will know
 Any request that takes a long time will be passed to Node.
 
 If you want to run a function, add parameters to the function.
+
+Whereever you run node is where the dot "." folder will start off looking
+
+# FS
+
+Networking is what we have been using so far.
+FS is a NEW FEATURE (for us) of the internal workings in node.
+
+The file system is accessible VIA FS, which is a bunch of C++ that allows Node to interact with the internals of a computer.
+
+use JS label (fs) to access NODE to access the files.
+NODE knows where to look for the file.
+
+`fs.readFile('/tweets.json', autoRunFunction);`
+
+The computer sets up a THREAD that runs and IO in Node
+Which IO in NODE sets up a thread? for NETWORK access
+FS access? Sets up a thread for cimmputer internals
+

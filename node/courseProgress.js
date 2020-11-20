@@ -6,9 +6,10 @@ var courses = [
 
 
 var electives = [
-    ['Advanced graphql', 3, 25],
-    ['Rethinking asynch JS', 6, 22]
-    ['Intro to MongoDB', 3, 23]
+    ['Intro to MongoDB', 3, 23],
+    ['Asynch Programming in JS with RX.js', 9, 38]
+    ['Javascript the New Hard Parts', 4, 48],
+    ['Rethinking asynch JS', 6, 22],
 
 ];
 
