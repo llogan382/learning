@@ -1,0 +1,29 @@
+// 1
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// 2
+generator client {
+  provider = "prisma-client-js"
+}
+
+// 3
+model Pet {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  type        String
+  name        String
+  owner       User
+}
+
+model User {
+    id      Int @id @default(autoincrement())
+    name    String
+    pets    Pet[]
+}
+
+
+
+

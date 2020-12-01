@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>How does NODE connect with Environment&quest;</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="how-does-node-connect-with-environment">How does NODE connect with Environment?</h1>
+<p><strong>POSIX</strong>. This is the way C-style programs integrated with LINUX OS's. Therre are 3 streams: Input, output, and ERROR.</p>
+<p>JS does not prescribe anything for I/O.
+There are standard outputs in the server- called STREAMS-
+If you want to write, you call <code>.write</code></p>
+<p>The whole point of I/O is to be as efficient as possible.</p>
+<h1 id="standard-error">Standard Error</h1>
+<p>There is standard read and write, but what about error?
+By default, our terminal treats them the same.
+It can be proven using a file path to show the differences..</p>
+<h1 id="standard-input">Standard input</h1>
+<p>They are quirky. They are affected by the SHELL, and all sorts of other things.
+There is a library called</p>
+<h1 id="tell-shell-to-hand-execution-off">Tell Shell to hand execution off:</h1>
+<p><code>#!/usr/bin/env node</code>
+This will tell your system (MAC) to go find NODE, and run this program as a NODE file.</p>
+<p>Also, always run in strict mode, so put this in the top as well:
+<code>&quot;use strict&quot;</code></p>
+<h1 id="how-to-change-permissions-and-make-it-an-executable-script">How to change permissions and make it an executable script?</h1>
+<p>Add this to the command line, where ex1.js is the file name:</p>
+<p><code>chmod u+x ex1.js</code></p>
+<p>git submodule add <a href="mailto:git@github.com">git@github.com</a>:llogan382/digging-into-node.git  /node/digging/_code</p>
+<h1 id="tip">TIP</h1>
+<p>Always add a HELP output to your files&quot;</p>
+<h1 id="how-to-access-inputs">How to access inputs?</h1>
+<p>Access arguments passed to our program through process.args, which is an array of objects passed.</p>
+<p>There are conventions for how this works. The dashes that get put in front of the args, and we could do regex to parse these items, but we want to use a package that uses this.</p>
+<p><code>npm install minimist</code></p>
+<p>If there is anything in the input that minimist can't figure out, it will place at the beginning of the items that are returned.</p>
+<p>There are a bunch of different ways parameters can get parsed;</p>
+<p>Minimist is a great resource, and it is used by TONS of other programs.
+Another option is YARGS.</p>
+
+    </body>
+    </html>

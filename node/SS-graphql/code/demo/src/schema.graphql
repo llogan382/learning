@@ -1,0 +1,18 @@
+  type Pet {
+      name: String!
+      id: Int
+      type: String!
+      owner: User
+  }
+
+  type User {
+      name: String!
+      id: Int
+      pets: [Pet]
+
+  }
+
+  type Query {
+    pets: [Pet]
+    users: [User!]!
+  }

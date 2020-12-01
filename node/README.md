@@ -36,7 +36,11 @@ How can it be implemented (tools)?
 
 Build somethign with it.
 
+- Build a TIMER app.
+-
+
 
 Concepts I need practice with:
 
 - [ ] Async Await. This is included in other courses
+

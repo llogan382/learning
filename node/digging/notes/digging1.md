@@ -10,5 +10,7 @@ How can the same code be used in the FE and the BE?
 
 The way NODE works are with THREADS- high I/O (input output) threads; Node is best suited for that.
 
+Node's sweet spot: High thoroughput, efficient input/output. It is not good for CPU intensive processes.
+
 Node's best story is that it can be inserted as the touchpont between the FE and the BE; it is a touch point between the devs on both sides, and the tasks are performed by NODE.
 
