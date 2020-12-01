@@ -36,8 +36,6 @@ Add this to the command line, where ex1.js is the file name:
 git submodule add git@github.com:llogan382/digging-into-node.git  /node/digging/_code
 
 
-
-
 # TIP
 
 Always add a HELP output to your files"
@@ -45,6 +43,9 @@ Always add a HELP output to your files"
 
 
 # How to access inputs?
+
+Best way to get info into input, is through command line parameter.
+Access the args passed in.
 
 Access arguments passed to our program through process.args, which is an array of objects passed.
 
