@@ -35,3 +35,5 @@ function showVals(element, index, array){
 
 courses.forEach(showVals);
 
+
+

@@ -1,3 +1,12 @@
 [submodule "node/digging/_code"]
 	path = node/digging/_code
 	url = git@github.com:llogan382/digging-into-node.git
+[submodule "node/intro-node/code/intro-node-js"]
+	path = node/intro-node/code/intro-node-js
+	url = https://github.com/llogan382/intro-node-js.git
+[submodule "node/adv-gql-v2/code"]
+	path = node/adv-gql-v2/code
+	url = https://github.com/llogan382/advanced-gql-v2.git
+[submodule "react/intro-react/code2"]
+	path = react/intro-react/code2
+	url = https://github.com/llogan382/complete-intro-to-react-v5.git
