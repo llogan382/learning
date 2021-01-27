@@ -32,6 +32,11 @@ Here is the course repo:
 
 ## REVIEW: How to convert a file from BROWSER to NODE?
 
+There is no DOM in NODE- so no WINDOW.etc
+
+
+
+
 
 
 

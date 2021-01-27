@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ruby&comma; the big picture</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+.line-numbers{ }
+</style>
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="ruby-the-big-picture">Ruby, the big picture</h1>
+<p><a href="https://app.pluralsight.com/library/courses/ruby-big-picture/table-of-contents">https://app.pluralsight.com/library/courses/ruby-big-picture/table-of-contents</a></p>
+<p>When I need to write a program from scratch, I use ruby.
+It feels natural.
+Ruby on Rails.</p>
+<p>What is the approach
+What it is good for
+(what it is NOT good for)</p>
+<p>Assume?</p>
+<p>How to write code.</p>
+<ol>
+<li>Discover. Lets write some ruby!</li>
+<li>Investigate. Look at OOP.</li>
+<li>Unlocking. Meta-programming</li>
+<li>Ecosystem. Interpreters, ibraries, community</li>
+<li>Pros and cons</li>
+</ol>
+<h1 id="how-to-execute">How to execute?</h1>
+<ol>
+<li>As a program</li>
+<li>in a shell.</li>
+</ol>
+<p>We will use pry
+<code>puts</code> means &quot;put this on screen&quot;
+<code>nil</code> is null. Every RUBY statement must return something.</p>
+<h1 id="tips">Tips?</h1>
+<p>No need to understand everything.
+Ignore the details, and follow along</p>
+<h1 id="scripting-language">Scripting Language.</h1>
+<p>It is DYNAMIC and INTERPRETED.
+It is like JAVA- it takes something, and returns a value.
+Java- each value TYPE needs to be spcified.
+Ruby, doesnt.
+Ruby is more similar to JS than JAVA (types dont need to be specified. )
+RUBY is flexible.
+We are using Ruby 2.</p>
+<p>With JAVA, you cannot take code and execute it. JS is compiled and runs in an interpreter.</p>
+<p>Ruby can have multiple interpretations- generally, it is INTERPRETED. Go to the file, then run it.
+Sometimes, this is called <strong>scripting language</strong></p>
+<p>Like, JS and Python - unlike Java, C#</p>
+<h1 id="process-a-csv">Process a CSV</h1>
+<p>in the albums.csv file:
+Load the data, print out records from the 50s.</p>
+<p>add this: <code>albums = CSV.read(&quot;albums.csv&quot;)</code> in terminal</p>
+<p>All rows are stores as an array, within a larger array.
+The first ROW is the header.
+remove it with <code>albums[0]</code></p>
+<h2 id="get-a-range">Get a RANGE</h2>
+<p><code>albums[2..4]</code></p>
+<p>It is <strong>ZERO BASED</strong></p>
+<h2 id="get-all-but-header-row">Get all but header row:</h2>
+<p><code>albums[1..]</code></p>
+<h2 id="run-a-function">Run a function</h2>
+<p>Here is the basic syntax:</p>
+<pre><code><code><div>def function_name?(arg1, arg2)
+    return ....
+end
+</div></code></code></pre>
+<p>Notice the <code>?</code> symbolizes a BOOLEAN response
+the <code>==</code> checks to see if the values are equal</p>
+<p>Convert string to integer:
+<code>album[3].to_i</code></p>
+<p>so, here are the commands:</p>
+<ol>
+<li>import csv: <code>require &quot;csv&quot;</code></li>
+<li>Check the row: <code>albums[1]</code></li>
+<li>Check genre: <code>album[2]</code> returns <em>Jazz</em></li>
+<li>Check if it is jazz: <code>album[2] == &quot;Jazz&quot;</code> <em>returns TRUE</em></li>
+<li>Convert year to intever: <code>album[3].to_i</code> <em>returns 1959</em></li>
+<li>Is it between a range? <code>album[3].to_i.between?(1950, 1959)</code> <em>returns TRUE</em></li>
+</ol>
+<p>So, is it JAZZ? And is it in the 50s?
+If it doesnt have an explicit return, it returns value of last statement, so you can skip the RETURN. Here is the complete function:</p>
+<pre><code><code><div>def classic_jass?(album)
+    album[2] == &quot;Jazz&quot; and album[3].to_i.between?(1950, 1959)
+end
+</div></code></code></pre>
+<p>Enter these lines 1 at a time in the terminal. If you enter the first line, RUBY then waits for the BODY of the function to be entered.</p>
+<p>Run the function like this:
+<code>classic_jazz?(albums[0])</code> <em>returns false</em></p>
+<p>To start from the bottom of the array:
+<code>classic_jazz?(albums[-1])</code> <em>returns false</em></p>
+<h2 id="a-different-way-to-loop">A different way to loop</h2>
+<p>In ruby there are different ways to do the same thing, and it is up to the dev to decide whats best
+<strong>blocks</strong></p>
+<p>They are like anonymous functions
+This block will take the array, and return the items that return TRUE, but not the items that return FALSE</p>
+<p>Here is an example:</p>
+<pre><code><code><div>albums.select {|album| album[2] == &quot;Jazz&quot; and album[3].to_i.between?(1950, 1959)}
+</div></code></code></pre>
+<p>A few more tweaks were added:</p>
+<pre><code class="language-Ruby"><div>GENRE = <span class="hljs-number">2</span>
+YEAR = <span class="hljs-number">3</span>
+
+<span class="hljs-keyword">require</span> <span class="hljs-string">&quot;csv&quot;</span>
+CSV.read(<span class="hljs-string">&quot;albums.csv&quot;</span>)[<span class="hljs-number">1</span>..]
+  .select {<span class="hljs-params">|album|</span>
+    album[GENRE] == <span class="hljs-string">&quot;Jazz&quot;</span> <span class="hljs-keyword">and</span> album[YEAR].to_i.between?(<span class="hljs-number">1950</span>, <span class="hljs-number">1959</span>)
+  }
+  .sort_by {<span class="hljs-params">|album|</span> album[YEAR].to_i }
+  .each {<span class="hljs-params">|album|</span> puts album.join(<span class="hljs-string">&#x27;,&#x27;</span>) }
+</div></code></pre>
+<p>From the lines above:
+1 and 2: these are constants
+4 require the CSV gem
+5 read the file. Skip the first line (the headers)
+6 Select items from the array <em>album</em>
+7 If the album with the constant <strong>GENRE</strong> is <em>Jazz</em> and the <strong>album</strong> has a <em>year</em> between the range 1950 and 1959, return
+9 Sort those items by album year
+10 Print off the results of this new array <code>.each</code></p>
+<h1 id="constants">Constants</h1>
+<p>They begin with an upper case letter: <code>GENRE = 2</code></p>
+<h2 id="ruby">Ruby</h2>
+<p>Generates a COMPACT bit of code. You can do A LOT with just a little bit of code.</p>
+
+    </body>
+    </html>

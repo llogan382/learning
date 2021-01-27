@@ -1,0 +1,146 @@
+I, [2021-01-14T16:47:40.910288 #58165]  INFO -- : Service call to maintain_consumer_1:<eumt:RequestPayload xmlns:eumt="http://ap.com/xsd/message/iso20022/eumt.003.01">
+    <urn:AppHdr xmlns:urn="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+        <urn:Fr>
+            <urn:OrgId>
+                <urn:Id>
+                    <urn:OrgId>
+                        <urn:Othr>
+                            <urn:Id>010026</urn:Id>
+                        </urn:Othr>
+                    </urn:OrgId>
+                </urn:Id>
+            </urn:OrgId>
+        </urn:Fr>
+        <urn:To>
+            <urn:OrgId>
+                <urn:Id>
+                    <urn:OrgId>
+                        <urn:Othr>
+                            <urn:Id>ZAPP</urn:Id>
+                        </urn:Othr>
+                    </urn:OrgId>
+                </urn:Id>
+            </urn:OrgId>
+        </urn:To>
+        <urn:BizMsgIdr>eumt.003.001.01</urn:BizMsgIdr>
+        <urn:MsgDefIdr>cf20937wet2-3896-4d78-ab66</urn:MsgDefIdr>
+        <urn:BizSvc>MaintainConsumerReqFromCFI</urn:BizSvc>
+        <urn:CreDt>2021-01-14T16:47:40.909Z</urn:CreDt>
+        <urn:Sgntr />
+    </urn:AppHdr>
+    <urn:Document xmlns:urn="urn:iso:std:iso:20022:tech:xsd:eumt.003.001.01">
+        <urn:EndUsrMntnc>
+            <urn:Hdr>
+                <urn:MsgFctn>MCIQ</urn:MsgFctn>
+                <urn:PrtcolVrsn>1</urn:PrtcolVrsn>
+                <urn:XchgId>1</urn:XchgId>
+                <urn:CreDtTm>2021-01-14T16:47:40.910Z</urn:CreDtTm>
+                <urn:InitgPty>
+                    <urn:Id>010026</urn:Id>
+                    <urn:Tp>FINI</urn:Tp>
+                </urn:InitgPty>
+                <urn:RcptPty>
+                    <urn:Id>ZAPP</urn:Id>
+                    <urn:Tp>SCHM</urn:Tp>
+                </urn:RcptPty>
+            </urn:Hdr>
+            <urn:EndUsrMntncReq>
+                <urn:Envt>
+                    <urn:Cstmr>
+                        <urn:Id>
+                            <urn:CstmrNb>PR_1610660860</urn:CstmrNb>
+                        </urn:Id>
+                    </urn:Cstmr>
+                </urn:Envt>
+                <urn:Req>
+                    <urn:TxTp>
+                        <urn:Tp>RGST</urn:Tp>
+                    </urn:TxTp>
+                    <urn:EndUsrPref>
+                        <urn:PrefDtls>
+                            <urn:Cd>MOPT</urn:Cd>
+                            <urn:Ind>false</urn:Ind>
+                        </urn:PrefDtls>
+                    </urn:EndUsrPref>
+                </urn:Req>
+            </urn:EndUsrMntncReq>
+        </urn:EndUsrMntnc>
+    </urn:Document>
+</eumt:RequestPayload>I, [2021-01-14T16:47:40.910637 #58165]  INFO -- : SOAP request: https://icfi-cr.mastercard.com:9443
+I, [2021-01-14T16:47:40.910660 #58165]  INFO -- : SOAPAction: "MaintainConsumer1", Content-Type: text/xml;charset=UTF-8, Content-Length: 1734
+D, [2021-01-14T16:47:40.910794 #58165] DEBUG -- :<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://ap.com/xsd/message/iso20022/eumt.003.01" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+    <env:Body>
+        <wsdl:MaintainConsumer1>
+            <eumt:RequestPayload xmlns:eumt="http://ap.com/xsd/message/iso20022/eumt.003.01">
+                <urn:AppHdr xmlns:urn="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+                    <urn:Fr>
+                        <urn:OrgId>
+                            <urn:Id>
+                                <urn:OrgId>
+                                    <urn:Othr>
+                                        <urn:Id>010026</urn:Id>
+                                    </urn:Othr>
+                                </urn:OrgId>
+                            </urn:Id>
+                        </urn:OrgId>
+                    </urn:Fr>
+                    <urn:To>
+                        <urn:OrgId>
+                            <urn:Id>
+                                <urn:OrgId>
+                                    <urn:Othr>
+                                        <urn:Id>ZAPP</urn:Id>
+                                    </urn:Othr>
+                                </urn:OrgId>
+                            </urn:Id>
+                        </urn:OrgId>
+                    </urn:To>
+                    <urn:BizMsgIdr>eumt.003.001.01</urn:BizMsgIdr>
+                    <urn:MsgDefIdr>cf20937wet2-3896-4d78-ab66</urn:MsgDefIdr>
+                    <urn:BizSvc>MaintainConsumerReqFromCFI</urn:BizSvc>
+                    <urn:CreDt>2021-01-14T16:47:40.909Z</urn:CreDt>
+                    <urn:Sgntr />
+                </urn:AppHdr>
+                <urn:Document xmlns:urn="urn:iso:std:iso:20022:tech:xsd:eumt.003.001.01">
+                    <urn:EndUsrMntnc>
+                        <urn:Hdr>
+                            <urn:MsgFctn>MCIQ</urn:MsgFctn>
+                            <urn:PrtcolVrsn>1</urn:PrtcolVrsn>
+                            <urn:XchgId>1</urn:XchgId>
+                            <urn:CreDtTm>2021-01-14T16:47:40.910Z</urn:CreDtTm>
+                            <urn:InitgPty>
+                                <urn:Id>010026</urn:Id>
+                                <urn:Tp>FINI</urn:Tp>
+                            </urn:InitgPty>
+                            <urn:RcptPty>
+                                <urn:Id>ZAPP</urn:Id>
+                                <urn:Tp>SCHM</urn:Tp>
+                            </urn:RcptPty>
+                        </urn:Hdr>
+                        <urn:EndUsrMntncReq>
+                            <urn:Envt>
+                                <urn:Cstmr>
+                                    <urn:Id>
+                                        <urn:CstmrNb>PR_1610660860</urn:CstmrNb>
+                                    </urn:Id>
+                                </urn:Cstmr>
+                            </urn:Envt>
+                            <urn:Req>
+                                <urn:TxTp>
+                                    <urn:Tp>RGST</urn:Tp>
+                                </urn:TxTp>
+                                <urn:EndUsrPref>
+                                    <urn:PrefDtls>
+                                        <urn:Cd>MOPT</urn:Cd>
+                                        <urn:Ind>false</urn:Ind>
+                                    </urn:PrefDtls>
+                                </urn:EndUsrPref>
+                            </urn:Req>
+                        </urn:EndUsrMntncReq>
+                    </urn:EndUsrMntnc>
+                </urn:Document>
+            </eumt:RequestPayload>
+        </wsdl:MaintainConsumer1>
+    </env:Body>
+</env:Envelope>

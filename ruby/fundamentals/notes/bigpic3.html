@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Unlocking Ruby&apos;s hidden magic</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+.line-numbers{ }
+</style>
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="unlocking-rubys-hidden-magic">Unlocking Ruby's hidden magic</h1>
+<h2 id="design-time">Design time</h2>
+<table>
+<thead>
+<tr>
+<th>Design Time</th>
+<th>Compilation</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Write the code. Define classes and methods. They cannot be changed</td>
+<td></td>
+<td>Execute the code. It can create new OBJECTS and METHODS if needed.</td>
+</tr>
+</tbody>
+</table>
+<p>Just like all Objects are CLASSES, you can create a new class and define new methods on it.</p>
+<p>like, a <code>String</code> has certain methods. You can create custom methods on a STRING.</p>
+<h2 id="metaprogramming">Metaprogramming</h2>
+<p>RUBY uses this.
+You can create methods that are generated at runtime. So, your CODE creates CODE.</p>
+<p>More specifically, your code at DESIGN TIME creates new methods that can be executed at RUNTIME, like was illustrated in the movie DB example.</p>
+<h2 id="domain-specific-landuage-dsls">Domain specific landuage (DSL's)</h2>
+<table>
+<thead>
+<tr>
+<th>...flexible syntax</th>
+<th>Metaprogramming</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bend the syntax to look like other languages</td>
+<td>Pack some interesting tricks into a Ruby program</td>
+</tr>
+</tbody>
+</table>
+<h2 id="too-much-power">Too much power?</h2>
+<p>You can change the default classes. Like, changing an <code>Integer</code> class with method <code>&quot;+&quot;</code> to  <code>&quot;plus&quot;</code>.
+So, defaults can be edited, and that can create dangerous issues.</p>
+
+    </body>
+    </html>
