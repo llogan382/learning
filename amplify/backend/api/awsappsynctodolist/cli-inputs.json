@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "awsappsynctodolist",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/lukelogan/projects/next_aith_awsApi/awsappsynctodolist/amplify/backend/api/awsappsynctodolist/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    }
+  }
+}
