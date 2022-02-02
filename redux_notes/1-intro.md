@@ -1,5 +1,7 @@
 # What is redux?
 
+> Notes from the [Frontend Masters Course: Redux fundamentals](https://frontendmasters.com/courses/redux-fundamentals/)
+
 The redux library.
 Redux can be used in something besides REACT.
 
@@ -37,3 +39,6 @@ HOW TO GET INITIAL STATE?
 ## Deeply nested object.
 
 How to update them?
+
+Where I left off: <https://frontendmasters.com/courses/redux-fundamentals/subscribe-binding-action-creators/>
+or, 38:24
