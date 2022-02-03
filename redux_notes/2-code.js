@@ -16,11 +16,11 @@ tasks: [
   {title: 'File monthly budget', completed: false},
 ] };
 
-// Here is the REDUCER.
-
-// Note, this is complicated. So, how can it get simplified?
 
 /*
+
+Here is the reducer.
+
 As the object grows, this can quickly get complicated.
 
 If this happens:
