@@ -4,6 +4,8 @@ Hi, I'm Luke. A frontend developer, and I am interested in all sorts of things.
 
 This is where I keep my notes about the things that I am **learning**, so that they can be available on various different machines, no matter where I am.
 
+Many of the notes below are from courses on Frent End Masters- I cannot say enough good things about the quality of their content.
+
 This year, in 2022, my goals are to learn about:
 
 1. React State
