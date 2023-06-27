@@ -54,4 +54,4 @@ Who will be using the system? What are the groups that will be using it?
 2. Discipline driven groups: UI designers, UI devs, product owner
 3. Discipline by product driven: UI designers on E commerce, UI decs on Checkout, UX designers on ios shopping app.
 
-Then, see how those groups measure progress.
+Then, see how those groups measure progress. 

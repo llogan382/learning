@@ -12,3 +12,5 @@ type Actions<T, K extends keyof T & string> = {
 }
 
 type UpdateNameAction = Actions<User, 'firstName'>
+
+type MoreUser = 
