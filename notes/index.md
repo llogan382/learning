@@ -36,6 +36,8 @@ Put the two together.
 # Tuesday:
 
 1. Logan web dev blog
+   1. Refactoring article
+   2. Next 13 App router
 2. Wiki Skills- auth and create prisma
 3. LWD Videos- next13 to-do app
 4. Tweet
