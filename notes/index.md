@@ -6,7 +6,7 @@
 
 
 Tech to get there?
-
+Do changes work?
 - AWS services?
 - Node to handle requests
 - What does nextjs work with?
