@@ -61,4 +61,25 @@ Interact Desriptor Language.
 The team building out the web api has a standard they follow, for how to interact with parts of the browser.
 The DOM is described in WebIDL.
 
+HTML code loaded in parser:
+
+1. Input node
+2. Div
+3. script. This starts the JS engine. This determines when JS starts getting run. It has global memory. This stores things in memory.
+
+Now, we have a DOCUMENT object. It has a hidden link.
+JS has a hidden link, DOCUMENT; anything that changes here immediately changes what we see; it is a C++ pointer, that is a LINK to the exact place in memory where this LIST (the DOM) is found.
+
+In memory, JS is parsed:
+
+`let jsDiv = document.querySelector('div')`
+We store the evaluated output from queryselectory DIVV on the DOCUMENT object into the variable jsDiv.
+
+This DIV is part of C++; querySelector creates an OBJECT; it has a link to the DIV ELEMENT on the DOM.
+It is populated by webIDL, and populated by methods for how to interact with this OBJECT in C++ memory.
+
+So, when you query something, it is accessed in the DOM, and what is returned is filled with methods that can be applied to the that object.
+You cannot LOG a COMMAND; you can only LOG the evaluated OUTPUT of a command.
+
+## Updating DOM elements with JS.
 
