@@ -83,3 +83,64 @@ You cannot LOG a COMMAND; you can only LOG the evaluated OUTPUT of a command.
 
 ## Updating DOM elements with JS.
 
+We have data.
+WebIDL is a stanardized way of interacting with features of the browser. It tells exactly how to interact w elements of the DOM.
+The REAL js div is an OBJECT with a method with access to the CSS DOM element;
+
+# User Interdation
+
+Every time something needs to change, it must run JS from scratch; there is no permanent memory between running a function to find and element on the DOM, and updating the element on the DOM.
+
+Every time something changes, the JS must run to update the screen.
+
+# 1 way data binding.
+
+- popular paradigm for tackling data/view consistency
+- Invalurable at scale
+- Enables us to build scalable apps.
+
+So we have a screen.
+We have a DOM.
+We have JS, and its memory, which is run from HTML linkins to JS.
+
+The MEMORY has a link, through DOCUENT, to access the DOM.
+How to make changes as predictable as possible?
+
+# Changing view based on interaction
+
+When user clicks on input:
+the event is added to the callback queue; if there is nothing left on the callback queue, the :handleclick" function is run;
+
+# Multiple user interactions.
+
+Now, there are multiple elements, and multiple elements. It gets harder for the memory to allocate exactly waht is going on, and how to keep the user's view accurate. This cannot scale.
+If the JS has to run from scratch with every change, with every line of JS, it gets difficult: reasoning out what the user did, and only allow the USER to effect STATE.
+
+Everything the USER sees is a relation of SAVE DATA/What the user sees.
+
+How can this get limited?
+
+Restrict every view to be of
+1. An update of DATA and
+2. A run of a single `dataToView` converter function
+
+This way, all the data is in one place. Everything the user sees is DATA; the data is changed based on what the user does.
+
+Everything the user SEES needs to be captured in data. Anything changeable has to have data.
+
+It is intenable to keep track of all of the code, and have it be conditional based on whether the user has changed anything.
+
+# Understanding the `dataToView` function.
+
+What the user sees needs to be the truth.
+State is useful. It describes everything that can possibly be changes, and seen by the user.
+
+So we have some code; the code is parsed and saved in memory.
+Anything that can change the view runs through `dataToView`.
+So if the user can change the view, it is in state, and binds 1-way.
+
+# One way data binding UI elements.
+
+first step: define what the user can see as data.
+
+
