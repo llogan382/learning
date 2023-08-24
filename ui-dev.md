@@ -143,4 +143,35 @@ So if the user can change the view, it is in state, and binds 1-way.
 
 first step: define what the user can see as data.
 
+## Virtual Dom
 
+So the HTML is read by the C++ runtime.
+It links to a script, which opens the JS runtime. This JS runtime has memory.
+
+Again, the only thing that can be updated is DATA; this DATA is read/represented byt eh DOM.
+One thing PIPES DATA to the VIEW;
+The other pipes data to the JS.
+
+There are different runtimes:
+The C++ runtime;
+it accepts the JS runtime to update the DOM;
+This will update the VIEW on the screen.
+
+## Auto updating views
+
+After the call stack is run, it will update the view with any data to view; this is a function that will update what the user sees.
+It takes the data, and creates a view BEFORE the user interacts.
+
+
+DATATOVIEW; this will keep track of everything visible that can be changed.
+
+When "removing" an element with JS, it isnt deleted from the C++ runtime; it is just removed from the view.
+
+Displaying or not displaying is actually the result of data.
+In order to keep track of each lement, we need to keep track of every element that is created/removed. It was not there, and then it is there. So, the DATA and the VIEW are being updated.
+
+If a DOM element is removed, DONT set its text content. How can you keep track of it?
+
+We just need to keep track of the STATE of the data; this is the source of truth; this determines what the user sees.
+
+## Understanding UI components.

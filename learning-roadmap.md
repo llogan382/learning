@@ -28,3 +28,24 @@ Just read and practice JS:
 - Currying
 - Composition
 -
+
+# What can help with payments?
+
+- Events
+- Typescript/react types.
+- Hooks
+- useReducer
+- Cypress
+- Jest
+- React testing library
+- authentication
+- NextJS
+  - Data fetching
+  - App directory
+
+# What can help with React library?
+
+- Types
+- tests
+- vite
+- versioning
