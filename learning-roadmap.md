@@ -27,4 +27,6 @@ Just read and practice JS:
 
 - Currying
 - Composition
--
+
+
+READING MORE NOTES
