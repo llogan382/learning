@@ -204,3 +204,59 @@ User
 
 `EXPOSE` documents ports containers created from image should expose. By default, it assumes TCP ports. BY DEFAULT, DOESNT EXPOSE a port.
 
+# Multi Stage Builds.
+
+How to control size of an image.
+App images are pretty big.
+How can we make an image smaller?
+
+THE BUILDER PATTERN.
+Create different DOCKERFILES.
+
+1. Create ubuntu based to get curl
+2. Another with a smaller image to run the file.
+
+So, run docker build twice. But, what we need is in the first image?
+We would need to copy from first image into second image, to run it.
+Keeping track of multiple docker files is a hreadache.
+Managing and automating these commands is hard. And can add human error.
+It uses temporary containers, which takes up disk space.
+
+The solution?
+
+MULTI STAGE BUILDS.
+
+It allows multiple BASE images. It allows gyou to use FROM multiple times.
+It allows you to copy files between images, so you can copy what is needed, and nothing more.
+
+use `--from`, with index of FILE (or the ALIAS ) to get from EXACTLY the image you need.
+
+1. You can copyt files/images that arents in the dockerfile. You can grab tools from other images this way
+2. You can re-use stages as many times you want. This keeps intermediate stages clean.
+
+WHY?
+
+It can keep your final image REALLY SMALL.
+It can be best to build the app, then copy into a smaller image as the final image.
+IT IS FASTER.
+Also, it is more secure. THe unneeded parts are discarded.
+
+
+# MUlti Platform.
+
+What if you want to run WINDOWS and MAC (or linux)?
+ARM for apple silicon
+x86_64 for intel/windows.
+There are others.
+
+What if we want to run x86_64 on ARM (apple)?
+ARM BASED cannot understand x86, and vice-versa.
+This is a problem.
+Almost every image was creatged on x86.
+
+Docker has several images and a manifest that ties them together.
+There is also a manifest list, which can tell which image to use based on a type of processor. BUT, those must exist in the image registry, like dockerhub.
+
+When LINUX executes, it looks for a machine to process. The use a QEMU to run the image, agnostic of the processor. It is an open source hypervisor.
+
+This means DOCKER can run many processor types. It can create many types of image, that can be read by an image manifest.
