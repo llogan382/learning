@@ -126,6 +126,87 @@ type;
 
 
 GROUP BY needs to be the thing you are selecting; the GROUP BY needs to be the same thing. You cannot group by TITLE, where the TITLE is different for each oe.s
-# For my blog
 
+# SQL Order of execution.
+
+What order do SQL queries happen?
+
+If you want to query, you want to search and get a certain set of things; maybe a count of something.
+
+Like, say we want to search for POSTS with MORE THAN 50 likes.
+You want to search, and get a count, and filter by that count. Though, it cannot use the WHERE and filter, because the COUNT doesnt exist yet. **COUNT isnt somthing you can filter using WHERE.**
+
+THIS WILL NOT WORK:
+```sql
+SELECT
+  likes, COUNT(likes)
+FROM
+  posts
+WHERE
+  COUNT(count) <= 50
+GROUP BY
+  likes;
+```
+
+There is a way around this though: **HAVING**.
+
+```sql
+SELECT
+  type, COUNT(type)
+FROM
+  ingredients
+GROUP BY
+  type
+HAVING
+  COUNT(type) < 10;
+```
+This is in a class called AGGREGATION FUNCTIONS.
+
+THe complete details of SQL order of execution is a deep hole of details.
+
+## Functions in SQL.
+
+If you are doing the same query over and over, you can store it as a function that is ready to go.
+
+There is a programming language called `plpgsql` (programming language PSQL) that can do this. It is SQL-like.
+
+You can actually do other programming languages like JS instead; but on here, we are using PLPGSQL.
+
+```sql
+  CREATE OR REPLACE FUNCTION //can be just CREATE
+    get_recipes_with_ingredients(low INT, high INT) // provide data types, which is an integer.
+  RETURNS
+    SETOF VARCHAR
+  LANGUAGE
+    plpgsql //tell what programmiing language.
+  AS
+  $$
+  BEGIN
+    RETURN QUERY SELECT
+      r.title
+    FROM
+      recipe_ingredients ri
+
+    INNER JOIN
+      recipes r
+    ON
+      r.recipe_id = ri.recipe_id
+
+    GROUP BY
+      r.title
+    HAVING
+      COUNT(r.title) between low and high;
+  END;
+  $$;
+```
+
+How do we call it?
+
+```sql
+SELECT * FROM get_recipes_with_ingredients(2, 3);
+```
+
+
+$$ - what do they mean? They are called "dollar quotes".
+You dont have to escape single quotes; it is like the backtick in JS.
 Make aDB for my blog.

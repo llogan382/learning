@@ -64,73 +64,73 @@ Questions for him:
 Brian and Karl Fotovat
 
 Have you been out here?
-I have a long history at apple. This team: 2.5 years. 
-Cant hire out west. 
-SD, NY, Austin, London, Shanghai. 
+I have a long history at apple. This team: 2.5 years.
+Cant hire out west.
+SD, NY, Austin, London, Shanghai.
 
 Our team: We work in "Wallet payments commerce" WPMC
-Everything inside the wallet. 
-Production engineering. This is new. Strated last year. 
+Everything inside the wallet.
+Production engineering. This is new. Strated last year.
 
 "Manager, Wallet & Payments SRE, Tooling & Telemetry Team at Apple"
 
-Intended to bridge gap SRE (site reliabillity) and infra engineers. 
-Our role, tools: portals, automation. 
+Intended to bridge gap SRE (site reliabillity) and infra engineers.
+Our role, tools: portals, automation.
 
 We got this position: Tool built by our team, no longer here. Both are leaving apple. (Christian)
 
-Dockhub- gatsby, mermaid. 
-Gatsby version is old. 
-Gatsby incremental builds0 GH hook, clones, builds it. These time out after 8 hrs. It is jenkins. 
-We need to get this thing up to speed. 
+Dockhub- gatsby, mermaid.
+Gatsby version is old.
+Gatsby incremental builds0 GH hook, clones, builds it. These time out after 8 hrs. It is jenkins.
+We need to get this thing up to speed.
 
 Will incremental builds work?
 
-Karl- PM, helping out on the project. 
+Karl- PM, helping out on the project.
 Currently, it is un-maintainable. What is the best way to do that?
 
-the MSD- Use dockhub and its capabilities to build MSDs into this portal. 
+the MSD- Use dockhub and its capabilities to build MSDs into this portal.
 
 Gatsby vs. Nextjs?
 
-Static, keep certain parts hidden. 
-Build times- 
+Static, keep certain parts hidden.
+Build times-
 
-Integrations- not many. Auth? Aplle connect. 
-Docs- are all in repos. They can add things to the config. 
+Integrations- not many. Auth? Aplle connect.
+Docs- are all in repos. They can add things to the config.
 
-Protect docs. 
-"bundle" is used on a partner site. Those teams have taken the project, they gave it back. 
+Protect docs.
+"bundle" is used on a partner site. Those teams have taken the project, they gave it back.
 
 Docs in yaml, md
 
-We habe ppl who own repos. This will look for changes, and as changes are pushed, it will push them into a tree to watch. 
+We habe ppl who own repos. This will look for changes, and as changes are pushed, it will push them into a tree to watch.
 
-Can we fix the 500 error. 
+Can we fix the 500 error.
 
-Jenkins- called "rio" internally. Templates and configs. Optimizing this is a focus. 
-Other cloud stuff- could also be improved. 
-Jenkins- used widely? 
-Answer: there are portals, many are using this system. It is not likely customer facing. 
+Jenkins- called "rio" internally. Templates and configs. Optimizing this is a focus.
+Other cloud stuff- could also be improved.
+Jenkins- used widely?
+Answer: there are portals, many are using this system. It is not likely customer facing.
 
-Each deployment is an independent deployment. Anything else in Rio is not depending on it. 
+Each deployment is an independent deployment. Anything else in Rio is not depending on it.
 
-Any project has a jenkins pipeline and a rio pipeline. 
+Any project has a jenkins pipeline and a rio pipeline.
 
-It is performing well on other builds. Deployment pods, kubernates, are the bigger problem. 
+It is performing well on other builds. Deployment pods, kubernates, are the bigger problem.
 
 "I am excited for you to come on board".
 
-You have enthusiasm for talking about these build tools. 
+You have enthusiasm for talking about these build tools.
 
-Many customer facing projects- 
+Many customer facing projects-
 
-This kicks off the deploy as well. 
+This kicks off the deploy as well.
 
-We will figure out some devs for you to talk to. And figure out the next steps. 
+We will figure out some devs for you to talk to. And figure out the next steps.
 
-Current bldg cary: 
+Current bldg cary:
 
-There are 3 people in that office. No seats right now. 
+There are 3 people in that office. No seats right now.
 
-Timeframe: Talk w those guys next week. Project is ready to get going. Dont know how long the project would last. 
+Timeframe: Talk w those guys next week. Project is ready to get going. Dont know how long the project would last.
