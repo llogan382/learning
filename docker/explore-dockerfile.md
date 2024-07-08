@@ -260,3 +260,6 @@ There is also a manifest list, which can tell which image to use based on a type
 When LINUX executes, it looks for a machine to process. The use a QEMU to run the image, agnostic of the processor. It is an open source hypervisor.
 
 This means DOCKER can run many processor types. It can create many types of image, that can be read by an image manifest.
+
+`docker run --privileged --rm aptman/qus --static -- --path arm` will run x86 as arm.
+OR, change to x86 to run as x86.
