@@ -1,15 +1,10 @@
-function userCreator (name, score){
-  const newUser = Object.create(userFunctionStore);
-  newUser.name = name;
-  newUser.score = score;
-  return newUser;
+function createFunction(){
+  function multiplyBy2(num){
+    return num*2;
+  }
+  return multiplyBy2;
 }
 
-const userFunctionStore = {
-  increment: function(){ this.score++; },
-  login: function(){ console.log("You're loggedin"); }
-}
-
-const user1 = userCreator("Will", 3);
-const user2 = userCreator("Tim", 5);
-user1.increment();
+const generatedFunc = createFunction(3);
+// const result = generatedFunc(3);
+console.log(generatedFunc); // 6
